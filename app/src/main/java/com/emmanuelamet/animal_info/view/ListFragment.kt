@@ -15,28 +15,26 @@ import com.emmanuelamet.animal_info.viewmodel.ListViewModel
 import kotlinx.android.synthetic.main.fragment_list.*
 
 class ListFragment : Fragment() {
-
     private lateinit var viewModel: ListViewModel
     private val listAdapter = AnimalListAdapter(arrayListOf())
+
     private val animalListDataObserver = Observer<List<Animal>>{
-        list ->
-        list?.let {
+        list -> list?.let {
             animalList.visibility = View.VISIBLE
             listAdapter.updateAnimalList(it)
         }
     }
 
     private val loadingLiveDataObserver = Observer<Boolean>{
-        isLoading ->
-        loadingView.visibility = if(isLoading)  View.VISIBLE else View.GONE
+        isLoading -> loadingView.visibility = if(isLoading)  View.VISIBLE else View.GONE
         if(isLoading){
             listError.visibility = View.GONE
             animalList.visibility = View.GONE
         }
     }
+
     private val errorLoadingLiveDataObserver = Observer<Boolean>{
-        isError ->
-        listError.visibility = if(isError)  View.VISIBLE    else    View.GONE
+        isError -> listError.visibility = if(isError)  View.VISIBLE    else    View.GONE
     }
 
     override fun onCreateView(
@@ -68,7 +66,6 @@ class ListFragment : Fragment() {
             refreshLayout.isRefreshing = false
         }
     }
-
 
     /*
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
