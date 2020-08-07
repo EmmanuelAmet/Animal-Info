@@ -33,11 +33,6 @@ class ListViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun hardRefresh(){
-        loading.value = true
-        getKey()
-    }
-
     private fun getKey(){
         disposable.add(
             apiService.getApiKey()

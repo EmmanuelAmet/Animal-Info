@@ -4,6 +4,7 @@ import android.database.DatabaseUtils
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -26,12 +27,14 @@ import com.emmanuelamet.animal_info.model.Animal
 import com.emmanuelamet.animal_info.model.AnimalPalette
 import com.emmanuelamet.animal_info.util.getProgressDrawable
 import com.emmanuelamet.animal_info.util.loadImage
+import com.google.android.gms.ads.InterstitialAd
 import kotlinx.android.synthetic.main.fragment_detail.*
 
 class DetailFragment : Fragment() {
 
     var animal : Animal? = null
     private lateinit var dataBinding: FragmentDetailBinding
+    private lateinit var mInterstitialAd: InterstitialAd
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,6 +46,16 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        context?.let {
+            mInterstitialAd = InterstitialAd(it)
+            mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+            if (mInterstitialAd.isLoaded) {
+                mInterstitialAd.show()
+            } else {
+                Log.d("TAG", "The interstitial wasn't loaded yet.")
+            }
+        }
+
 
         arguments?.let {
             animal = DetailFragmentArgs.fromBundle(it).animal

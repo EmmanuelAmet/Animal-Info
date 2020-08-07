@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Animal_Info</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Animals Info</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="true">Topic</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to a topic</string>
+    <string name="fcm_message">Animals Info App</string>
+    <string name="splash_title">Animals Info App</string>
+    <string name="picture">picture</string>
 </resources>

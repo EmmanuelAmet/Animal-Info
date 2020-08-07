@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "225347969185",
+    "firebase_url": "https://animal-info-app.firebaseio.com",
+    "project_id": "animal-info-app",
+    "storage_bucket": "animal-info-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225347969185:android:fc8d44d0bf7b68d47ed0e0",
+        "android_client_info": {
+          "package_name": "com.emmanuelamet.animal_info"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225347969185-u7j9b5hj1r1t4a0aqrkasvkhlis3dtkq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emmanuelamet.animal_info",
+            "certificate_hash": "e188a18b803518287e174e85f99d5e44e878b37f"
+          }
+        },
+        {
+          "client_id": "225347969185-4289giclhmggt1hsm7u3ltj72jrfj87l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBok4QXFyVNyjzteTAQIFy-QESJhJb_nqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225347969185-4289giclhmggt1hsm7u3ltj72jrfj87l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
